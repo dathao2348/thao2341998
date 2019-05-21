@@ -7,11 +7,15 @@
 </head>
 <body>
 <?php
-if(isset($_POST["height"])&& isset($_POST["weight"])){
-    $weight=(int) $_POST["weight"];
-    $height=(int) $_POST["height"];
-    $bmi=$weight/($height*$height);
-    echo "Chỉ số BMI là:" .$bmi;
+$weight = $height = '';
+if (isset($_POST["height"]) && isset($_POST["weight"])) {
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
+    $weight = $_POST["weight"];
+    $height = $_POST["height"];
+    $bmi = $weight/($height*$height);
+    echo "Chỉ sô BMI là : " . $bmi;
 }
 ?>
 <h1>Tính chỉ số BMI</h1>
