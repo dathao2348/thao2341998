@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+<?php
+if(isset($_POST["height"])&& isset($_POST["weight"])){
+    $weight=(int) $_POST["weight"];
+    $height=(int) $_POST["height"];
+    $bmi=$weight/($height*$height);
+    echo "Chỉ số BMI là:" .$bmi;
+}
+?>
 <h1>Tính chỉ số BMI</h1>
 
 <div class="container">
