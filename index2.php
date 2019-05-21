@@ -8,30 +8,30 @@
 <body>
 <?php
 $weight = $height = '';
-if (isset($_POST["height"]) && isset($_POST["weight"])) {
+$weight = $height = 0;
+if(isset($_POST["height"]) && isset($_POST["weight"])){
     echo "<pre>";
     print_r($_POST);
     echo "</pre>";
     $weight = $_POST["weight"];
     $height = $_POST["height"];
-    $bmi = $weight/($height*$height);
-    echo "Chỉ sô BMI là : " . $bmi;
-}
-echo "<br>"
- if($bmi < 18.5){
-            echo "Thiếu cân";
-        } elseif ($bmi >=18.5 && $bmi <= 22.99){
-            echo "Bình thường";
-        } elseif ($bmi >=23 && $bmi <= 24.99){
-            echo "Thừa cân";
-        } elseif ($bmi >= 25 && $bmi <= 29.99){
-            echo "Béo phì độ I";
-        } elseif ($bmi >= 30 && $bmi <= 39.99){
-            echo "Béo phì độ II";
-        } elseif ($bmi >= 40){
-            echo "Béo phì độ III";
-        }
+    $bmi = $weight/($height * $height);
+    echo "Chỉ số BMI là: " . $bmi;
+    echo "<br>";
+    if($bmi < 18.5){
+        echo "Thiếu cân";
+    } elseif ($bmi >=18.5 && $bmi <= 22.99){
+        echo "Bình thường";
+    } elseif ($bmi >=23 && $bmi <= 24.99){
+        echo "Thừa cân";
+    } elseif ($bmi >= 25 && $bmi <= 29.99){
+        echo "Béo phì độ I";
+    } elseif ($bmi >= 30 && $bmi <= 39.99){
+        echo "Béo phì độ II";
+    } elseif ($bmi >= 40){
+        echo "Béo phì độ III";
     }
+}
 
 
 ?>
